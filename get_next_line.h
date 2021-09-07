@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:44:54 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/09/06 16:52:10 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2021/09/06 22:30:44 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 # include <unistd.h>
 # include <stdio.h>
 
+int		free_reader(char **backup_buffer, int bytes_read);
 void	arrange_backup(char **backup_buffer, int *i);
 char	*extract_line(char **buffer);
 int		read_file(int fd, char **buffer, char **buffer_backup);

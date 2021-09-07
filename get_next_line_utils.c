@@ -6,11 +6,17 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:44:50 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/09/06 21:08:27 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2021/09/06 22:26:39 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
+
+int	free_reader(char **backup_buffer, int bytes_read)
+{
+	free (*backup_buffer);
+	return (bytes_read);
+}
 
 char	*gnl_join(char **s1, char **s2)
 {
