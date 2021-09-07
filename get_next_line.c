@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:44:47 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/09/06 21:40:23 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2021/09/06 22:02:15 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,10 @@ int	read_file(int fd, char **buffer, char **buffer_backup)
 	{
 		bytes_read = read(fd, *buffer, BUFFER_SIZE);
 		if (bytes_read < 0)
+		{
+			free (*buffer_backup);
 			return (bytes_read);
+		}
 		(*buffer)[bytes_read] = '\0';
 		*buffer_backup = gnl_join(buffer_backup, buffer);
 		i = 0;
