@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:44:54 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/09/07 09:57:29 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2021/09/07 12:35:47 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <limits.h>
 
 int		free_reader(char **backup_buffer, int bytes_read);
 void	arrange_backup(char **backup_buffer, int *i);

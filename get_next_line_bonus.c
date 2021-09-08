@@ -6,11 +6,12 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:44:47 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/09/07 09:59:38 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2021/09/08 19:56:07 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
+#include <stdio.h>
 
 void	arrange_backup(char **backup_buffer, int *i)
 {
@@ -106,7 +107,7 @@ char	*get_next_line(int fd)
 {
 	char		*buff;
 	char		*line;
-	static char	*backup_buff[1024];
+	static char	*backup_buff[256];
 
 	if (fd < 0 || BUFFER_SIZE <= 0 || fd > 256)
 		return (NULL);
