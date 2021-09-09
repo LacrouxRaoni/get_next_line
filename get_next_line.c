@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:44:47 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/09/07 11:27:16 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2021/09/08 21:19:49 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -86,7 +86,7 @@ char	*get_line(int fd, char **buff, char **backup_buff)
 	int	bytes_read;
 
 	bytes_read = read_file(fd, buff, backup_buff);
-	if (bytes_read == 0 && *(backup_buff)[0] == '\0')
+	if (bytes_read == 0 && (*backup_buff)[0] == '\0')
 	{
 		free (*backup_buff);
 		*backup_buff = NULL;
