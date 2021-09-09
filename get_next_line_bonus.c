@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:44:47 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/09/08 21:46:10 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2021/09/08 22:06:39 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -123,6 +123,5 @@ char	*get_next_line(int fd)
 		*backup_buff[fd] = '\0';
 	}
 	line = get_line (fd, &buff, &backup_buff[fd]);
-	
 	return (line);
 }

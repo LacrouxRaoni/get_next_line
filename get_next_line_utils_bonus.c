@@ -6,7 +6,7 @@
 /*   By: rruiz-la <rruiz-la@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/09/01 18:44:50 by rruiz-la          #+#    #+#             */
-/*   Updated: 2021/09/07 09:56:38 by rruiz-la         ###   ########.fr       */
+/*   Updated: 2021/09/08 21:59:31 by rruiz-la         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 int	free_reader(char **backup_buffer, int bytes_read)
 {
 	free (*backup_buffer);
+	*backup_buffer = NULL;
 	return (bytes_read);
 }
 
